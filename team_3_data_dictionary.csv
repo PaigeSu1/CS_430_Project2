@@ -1,0 +1,20 @@
+Variables,Unique Values,Definition,Example
+team,,team number,3
+team_size,,number of members on the team,4
+dataset,1,which dataset the row belongs to (matches dataset_code),bodex
+unit_type,1,"What one row represents (one object, hand, and scale file)",object_hand_scale_file
+source_object_id,796,the object's natural key (bodex object code),core_bottle_1ffd7113...
+scene_id,0,"Dex-Net pile ID. Always empty for BODex, since BODex has no scenes.",
+category,79,Object category label from the source. A category alone isn’t a unique identity.,core_bottle: bottle
+scale,4,"The object’s scale for that file (0.06, 0.08, 0.10 or 0.12). Matches the scaleXXX.npy file name.",0.06
+split,3,"The instructor’s primary train/val/test split. Store it exactly, never change it.",test
+split_origin,1,Name of the split scheme,primary_object_split_v1
+source_official_split,2,"BODex’s own train/test split. Goes in split_assignments.source_official_split, separate from split.",train
+source_file,~9.6k,"Which archive and inner path to read, in the form archive::inner/path.",shadow.tar.gz::bodex_shadow/succ_collect/<code>/floating/scale006.npy
+mesh_reference,796,"Archive and path of the object’s mesh, in the same archive::path form. Becomes the mesh_relpath in your export.",DGN_2k_processed.tar.gz::DGN_2k/processed_data/<code>/mesh/simplified.obj
+est_grasps,185,Estimated number of grasps in that file. A planning aid only.,191
+est_bytes,~4.2k,estimated size of the data in that file,
+id_status,1,"all real in your file. Probably means the object ID is a genuine source ID rather than a placeholder, like the SYN_ demo rows.",
+priority_rank,759,the first rows show rank 346 and tier required. These look like ordering and importance labels from the instructor,
+tier,1,,
+note,117,"holds hints like hand=shadow; joints=22; split_basis=stratified_bodex. It tells you which hand the row is and its joint count, which is useful for checking joint-array lengths",
